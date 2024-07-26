@@ -19,10 +19,6 @@ app.get('/', (req, res) => {
     res.render("home")
 })
 
-app.get('/maro', (req, res) => {
-    res.send("Agmad wa7ed fel denya")
-})
-
 // Passing data to templates
 app.get('/random', (req, res) => {
     random = Math.floor(Math.random() * 10) + 1
