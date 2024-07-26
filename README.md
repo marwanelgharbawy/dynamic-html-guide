@@ -1,6 +1,6 @@
 # Creating a dynamic webpage with EJS Templating
 
-This mini guide will help you through creating dynamic webpages using EJS templating
+This mini guide will help you through creating dynamic webpages using EJS templating.
 
 EJS is like HTML but upgraded, you can pass data to them and use JavaScript logic inside of it. This allows you to create templates for your webpage, changing particular details by passing data to these files.
 
@@ -40,7 +40,6 @@ const path = require("path")
 app.set('views', path.join(__dirname, '/views'))
 ``` 
 
-
 ## EJS syntax
 
 There's a VS Code extension for snippets and syntax highlighting, also refer to the [EJS documentation](https://ejs.co/#docs) yourself.
@@ -74,8 +73,7 @@ app.get('/random', (req, res) => {
 
 To use the variable in the EJS file, you'll have to surround it with these tags `<%= %>` like this:
 ```html
-<h1>Your random number is <%=random%>
-        </h1>
+<h1>Your random number is <%=random%></h1>
 ```
 
 ## JavaScript logic in EJS
@@ -115,7 +113,6 @@ Again if you're running the server from a different directory, you can do the sa
 app.use(express.static(path.join(__dirname, '/public')))
 ```
 
-
 ## Partials
 
 You can add blocks of HTML using the include statement, this can be really helpful if you want to change the includes or the navbar for the webpage. 
@@ -148,6 +145,10 @@ You can do the same thing for a footer and have the `</body>` and `</html>` clos
     <h1>Welcome, <%= username %></h1>
 <%- include('partials/footer') %>
 ```
+
+## How useful is it?
+
+Given a database, you can display for example the same details of different people based on their id or something. Imagine passing an object and then in the EJS file you use the `object.name` and then `object.age` depending on the passed object.
 
 ### Test my code:
 Clone this repository and run `npm install` and try modifying stuff `:)`
