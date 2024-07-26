@@ -1,0 +1,14 @@
+<%- include('partials/head') %>
+
+    <div class="container">
+
+        <h1>List of friends</h1>
+        <ul>
+            <% for( let friend of friends ) { %>
+                <li>
+                    <%= friend %>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+    <%- include('partials/footer') %>
